@@ -26,9 +26,9 @@ class TestGame(unittest.TestCase):
 
     def test_io(self):
         my_game = game.game()
-        # self.assertEqual(my_game.read("1\t\t2"), ['1', '2'])
-        # self.assertEqual(my_game.read('1\t\t2 3'), ['1', '2', '3'])
-        # self.assertEqual(my_game.read("1 str\t4"), ['1', 'str', '4'])
+        self.assertEqual(my_game.read("1\t\t2"), ['1', '2'])
+        self.assertEqual(my_game.read('1\t\t2 3'), ['1', '2', '3'])
+        self.assertEqual(my_game.read("1 str\t4"), ['1', 'str', '4'])
         self.assertTrue(my_game.put([0, 0]))
         self.assertTrue(my_game.put(['1', '0']))
         self.assertFalse(my_game.put([0, -1]))

@@ -10,6 +10,7 @@ class game(object):
         self.drow = True
         self.field = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
         self.current_player = False
+        self.step_counter = 0
 
     def print_field(self):
         if not self.drow:
@@ -38,7 +39,9 @@ class game(object):
         except Exception:
             return False
 
-    def read(self):
+    def read(self, data=None):
+        if data is not None:
+            return re.split(r'\s+', data)
         data = input()
         return re.split(r'\s+', data)
 
@@ -82,6 +85,7 @@ class game(object):
     def start(self):
         self.field = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
         self.current_player = False
+        self.step_counter = 0
         print('Players: \n1st player: ')
         self.players[0] = input()
         print('2nd player: ')
@@ -89,13 +93,15 @@ class game(object):
 
         while True:
             self.print_field()
-            winner = self.check_field()
-            if (winner is not None):
-                print('Winner is ' + self.players[winner])
-                return
+            if self.step_counter > 4:
+                winner = self.check_field()
+                if (winner is not None):
+                    print('Winner is ' + self.players[winner])
+                    return
             if self.drow:
                 print(self.players[int(self.current_player)] + ':')
             if (not self.put(self.read())):
                 self.drow = False
             else:
                 self.drow = True
+                self.step_counter += 1
