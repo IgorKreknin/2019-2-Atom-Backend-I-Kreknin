@@ -5,7 +5,7 @@ import game
 class TestGame(unittest.TestCase):
 
     def test_field_functions(self):
-        my_game = game.game()
+        my_game = game.Game()
         my_game.field = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
         self.assertEqual(my_game.check_field(), None)
         my_game.field = [['X', 'X', 'X'], ['X', 'O', ' '], [' ', ' ', ' ']]
@@ -16,7 +16,7 @@ class TestGame(unittest.TestCase):
         self.assertEqual(my_game.check_field(), 2)
 
     def test_validator(self):
-        my_game = game.game()
+        my_game = game.Game()
         self.assertTrue(my_game.validate([2, 0]))
         self.assertTrue(my_game.validate(['0', '0']))
         self.assertFalse(my_game.validate([0]))
@@ -25,7 +25,7 @@ class TestGame(unittest.TestCase):
         self.assertFalse(my_game.validate(['str']))
 
     def test_io(self):
-        my_game = game.game()
+        my_game = game.Game()
         self.assertEqual(my_game.read("1\t\t2"), ['1', '2'])
         self.assertEqual(my_game.read('1\t\t2 3'), ['1', '2', '3'])
         self.assertEqual(my_game.read("1 str\t4"), ['1', 'str', '4'])

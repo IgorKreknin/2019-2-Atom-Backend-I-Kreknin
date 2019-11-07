@@ -26,3 +26,15 @@
 2019/10/16 17:47:17 [error] 12205#12205: *26802 upstream prematurely closed connection while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /proxy/ HTTP/1.1", upstream: "http://127.0.0.1:8000/proxy/", host: "localhost"
 2019/10/16 17:50:22 [error] 12205#12205: *26804 upstream prematurely closed connection while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /proxy/ HTTP/1.1", upstream: "http://127.0.0.1:8000/proxy/", host: "localhost"
 2019/10/16 18:44:36 [error] 12205#12205: *46831 open() "/home/igor/backend/2019-2-Atom-Backend-I-Kreknin/Homework_3/public/8880" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /8880 HTTP/1.1", host: "localhost"
+2019/10/16 19:37:15 [error] 12205#12205: *56863 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /proxy HTTP/1.1", upstream: "http://127.0.0.1:8000/proxy", host: "localhost", referrer: "http://localhost/"
+2019/10/16 20:02:51 [error] 14875#14875: *2 open() "/home/igor/backend/2019-2-Atom-Backend-I-Kreknin/Homework_3/public/:80" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /:80 HTTP/1.1", host: "localhost"
+2019/10/16 20:03:04 [emerg] 14914#14914: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2019/10/16 20:03:04 [emerg] 14914#14914: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2019/10/16 20:03:04 [emerg] 14914#14914: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2019/10/16 20:03:04 [emerg] 14914#14914: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2019/10/16 20:03:04 [emerg] 14914#14914: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2019/10/16 20:03:04 [emerg] 14914#14914: still could not bind()
+2019/10/16 20:03:13 [error] 14875#14875: *2 open() "/home/igor/backend/2019-2-Atom-Backend-I-Kreknin/Homework_3/public/:80" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /:80 HTTP/1.1", host: "localhost"
+2019/10/16 20:03:27 [error] 14875#14875: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /proxy HTTP/1.1", upstream: "http://127.0.0.1:8000/proxy", host: "localhost", referrer: "http://localhost/"
+2019/10/30 00:38:30 [error] 666#666: *1 open() "/home/igor/backend/2019-2-Atom-Backend-I-Kreknin/Homework_3/public/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
+2019/10/30 14:17:58 [error] 708#708: *1 open() "/home/igor/backend/2019-2-Atom-Backend-I-Kreknin/Homework_3/public/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
