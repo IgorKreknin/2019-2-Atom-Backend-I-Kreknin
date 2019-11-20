@@ -1,0 +1,15 @@
+<style>
+	input{
+		display: block;
+	}
+
+	select{
+		display: block;
+	}
+</style>
+<form method='post'>
+    {% csrf_token %}
+    {{ chatForm }}
+    {{ membersForm }}
+    <input type='submit' value='add'>
+</form>

@@ -3,3 +3,4 @@ venv/
 *.swo
 *.swp
 *.sqlite3
+db_settings.py

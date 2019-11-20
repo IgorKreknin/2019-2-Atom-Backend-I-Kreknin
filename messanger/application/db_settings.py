@@ -1,4 +1,4 @@
-default = {
+default_database_settings = {
 	'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'db',
     'USER': 'igor',

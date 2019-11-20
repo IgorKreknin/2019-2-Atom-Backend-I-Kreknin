@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from application.db_settings import default_database_settings
 #import db_settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,6 +28,8 @@ SECRET_KEY = '@$f$!@k=9id1p_^=z6$ql8cp-ag0th^@x4#w*ldy3%me&3fws4'
 DEBUG = False
 
 ALLOWED_HOSTS = []
+
+AUTH_USER_MODEL = 'user.User'
 
 
 # Application definition
@@ -79,14 +82,7 @@ WSGI_APPLICATION = 'application.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db',
-        'USER': 'igor',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
+    'default': default_database_settings
 }
 
 
